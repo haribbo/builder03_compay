@@ -1,22 +1,5 @@
-/**
-*** SIMPLE GRID
-*** (C) ZACH COLE 2016
-**/
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL */
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
-  font-size: 100%;
-}
 
 /* ROOT FONT STYLES */
 /*
