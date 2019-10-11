@@ -1,0 +1,66 @@
+:root {
+  --dark-black:#090809;
+  --ft-sub:#444;
+  --right-black:#222;
+  --ft-white:#fff;
+  --point-color:#0048ff;
+  --sub-color:#2b462a;
+  --point-rgb-color:rgba(23,33,123,0.6);
+  --border:#e3e3e3;
+  --bg-point:#1b1c12;
+  --max-width:1100px;
+  --box_shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  --opacity-white-line: rgba(255,255,255,0.15);
+}
+
+/* font-family: 'Big Shoulders Text', cursive;
+font-family: 'Russo One', sans-serif; */
+
+.max-width {width: var(--max-width); margin:0 auto;}
+/* section_heading */
+.section_heading  {text-align: center; padding: 40px 0 80px 0; position: relative;}
+.section_heading h2,.section_tit { font-size: 40px; margin: 10px 0 10px 0; line-height: 1.4; letter-spacing: 1.5px;}
+.section_heading p  {max-width: 400px; margin: 0 auto; font-weight: bold; font-size: 15px; text-transform: uppercase;letter-spacing: -1px;}
+.section_heading .absole_line_h {height: 18px; overflow: hidden;}
+.section_heading .absole_line_h:after {background-color:var(--point-color); width: 60px; height: 12px; transform: rotate(-50deg); transform-origin: center; margin-left: -30px; top:25%; }
+/* heading */
+.small_heading { text-align: right;}
+.small_heading h2{ position: relative; font-size: 32px; color: var(--ft-white);}
+.small_heading p {color: var(--ft-white); font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
+
+/* sub_heading */
+.sub_heading {text-align: center; font-size: 25px; color: var(--ft-white); margin-bottom: 80px;}
+.sub_heading h2 {color: var(--ft-color); font-weight:400;}
+.sub_heading h2 .sub_heading_point {font-size: inherit; color:var(--point2);}
+
+/* sub_page_showcase */
+/*css 소스 예:
+.sub_page_showcase.aubout_showcase :background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/aboutus/aboutus_showcase.jpg') no-repeat center/cover; */
+.sub_page_showcase {width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table;}
+.sub_page_showcase .inner {display: table-cell; vertical-align: middle; color:var(--bg-right-gray);}
+.sub_page_showcase h2 {margin: 8px; font-size: 37px; max-width: 1100px; margin: 0 auto; font-family: 'Russo One', sans-serif !important;}
+/* .sub_page_showcase p .dash {margin: 0 8px; font-weight: bold;} */
+.sub_page_showcase p {color:var(--point-color) !important;  font-size: 18px;}
+.sub_page_showcase h2,.sub_page_showcase h2 p {color:inherit !important;}
+
+/* absole line */
+.absole_line_v {position: relative;}
+.absole_line_v:after {content:''; width: 2px; height: 100%; background-color: var(--ft-white); position: absolute; top:0}
+.absole_line_v.left_v:after {left: -8px;}
+.absole_line_v.right_v:after {right:-8px;}
+.absole_line_h {position: relative;}
+.absole_line_h:after {content:''; width: 100%; height: 2px; background-color: var(--ft-white); position: absolute; left:50%; transform: translate(-50%); z-index: 3;}
+.absole_line_h.bottom_h:after {bottom: -8px;}
+
+/* root site 걍로 */
+.root_cover {position: relative;}
+.root {height: 50px; width: 100%; background-color: rgba(0,0,0,.8); position: absolute; bottom:0; left:0; }
+.root ul {margin: 0 auto; max-width: var(--max-width); border-left: 1px solid var(--opacity-white-line); border-right: 1px solid var(--opacity-white-line); overflow: hidden;}
+.root ul li {line-height: 50px; color:var(--bg-right-gray); font-size: 16px; text-align: left !important; float: left; padding: 0 20px; border-right: 1px solid var(--opacity-white-line);}
+.root ul li a {color:rgba(255,255,255,0.65); transition: .3s;}
+.root ul li a:hover {color:rgba(255,255,255,0.9);}
+.root ul li i {color:inherit; display: inline-block; margin-right: 8px;}
+
+/*  */
+.placeholder {display: table; height: 100%; width: 100%; background-color: #f4f4f4;}
+.placeholder .placeholder_txt {display: table-cell; vertical-align: middle; text-align: center; font-weight: bold; color: #999; text-transform: uppercase; font-family: 'Patua One';}

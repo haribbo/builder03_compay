@@ -19,7 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -43,10 +43,3 @@ table {
 	border-spacing: 0;
 }
 a{text-decoration: none;}
-
-
-/* https://www.wemade.com/IrKr
-https://www.daejeon.go.kr/dma/index.do
-참고하기
-font-family: 'Nanum Gothic', sans-serif;
-*/

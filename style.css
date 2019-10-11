@@ -1,7 +1,85 @@
 @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:500,800,900|Russo+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap'); */
 
-@import url("css/default.css");
-@import url("css/semantic.min.css");
 @import url("css/basis.css");
+@import url("css/kboard-css.css");
+@import url("css/simple-grid.css");
+
+/* default css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* my default css */
+body {letter-spacing: 1px; line-height: 1;}
+body, span,span a,a { font-family: 'Nanum Gothic', sans-serif; line-height: 1.5; font-size: 16px; color:var(--ft-white); text-decoration: none;}
+h1,h2,h3,h4,h5,h6 { font-family: 'NanumSquare', sans-serif !important; font-weight: bold; color:var(--dark-black); line-height: 1.4;}
+ol, ul {list-style: none;}
+a{text-decoration: none; display: inline-block; vertical-align: middle;}
+button {background: none; cursor: pointer;}
+p {line-height: 1.8; color:var(--ft-sub);}
+strong{font-weight: 600;}
+* {box-sizing: border-box;}
+
+header {position: absolute; max-width: 1100px; left:50%; transform: translate(-50%); z-index: 10;}
+nav.main_nav {margin: 0 auto; display: flex;  justify-content: space-between; align-content: stretch; align-items: center; width: 1100px;}
+nav.main_nav > h1.logo {font-size: 20px; font-weight: bold; display: inline-block; color:var(--ft-white); font-weight: 800; position: relative; z-index: 10; letter-spacing: -0.5px;}
+nav.main_nav > h1.logo a {font-size: inherit;}
+nav.main_nav > h1.logo span.bg {display: inline-block; position: absolute; width: 50px; height: 50px; background-color: var(--point-color); top:-10px; left:-10px; z-index: -1; transform:skewX(-20deg);}
+nav.main_nav > ul {line-height: 1; padding: 20px 0;}
+nav.main_nav > ul > li {display: inline-block; padding: 0 15px; line-height: inherit;}
+nav.main_nav > ul > li > a { font-size: 16px; font-weight: normal; line-height: inherit; color:var(--ft-white); opacity: 0.8; font-family: 'Big Shoulders Text', cursive; letter-spacing: 1px;}
+nav.main_nav > ul > li:hover a { opacity: 1;}
+
+/* 공통 showcase */
+.sub_page_showcase {background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/showcase.jpg') no-repeat center/cover; }
+
+section.main_top .absole_line_h,section.main_bottom .absole_line_h {display: none;}
+section.main_top .flex_row > div.active:after {right:0;}
+section.main_top .flex_row > div.active .small_heading { opacity: 1; transform: scale(1); right:30px;}
+
+.num {position: relative; z-index: 10; font-size: 30px; top:70px; left: 30px; font-weight: bold;}
+section.main_top {height: 80vh; background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('images/marketing.jpg') no-repeat center/cover;}
+section.main_top .flex_row {max-width: 1100px; margin: 0 auto; height: 100%;position: relative; align-content: }
+section.main_top .flex_row > div {border-left:1px solid var(--opacity-white-line); flex-basis: 25%; max-width: 25%; overflow: hidden; position: relative;}
+section.main_top .flex_row > div:last-child {border-right: 1px solid var(--opacity-white-line);}
+
+section.main_top .flex_row > div .absole_line_h { top: 10px; margin-top: 63px; left: 30px;}
+section.main_top .flex_row > div .small_heading {position: absolute; right: 40px; bottom: 40px; z-index: 10; opacity: 0.6; transform: scale(0.9); transform-origin:bottom; transition: 0.3s;  right: -100%; }
+section.main_top .flex_row > div:after { content: ''; height: 100%; width: 100%; right:-100%; position: absolute; top:0;background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); transition: 0.3s;}
+section.main_top .flex_row > div:hover:after {right:0;}
+section.main_top .flex_row > div:hover .small_heading { opacity: 1; transform: scale(1); right:30px;}
+section.main_top .flex_row .root {position: absolute; width: 1100px;}
+
+section.main_bottom {height: 15vh; background-color:var(--dark-black);}
+section.main_bottom .float_row {height:inherit;;}
+section.main_bottom .float_row > div {border-left: 1px solid var(--opacity-white-line); height: inherit; padding: 0 30px; position: relative;}
+section.main_bottom .float_row > div:last-child {border-right: 1px solid var(--opacity-white-line);}
+section.main_bottom .float_row > div .small_heading { position: absolute; right:30px; bottom:30px;}
+section.main_bottom .float_row > div .small_heading h2 {font-size: 20px;}
+section.main_bottom .float_row > div .small_heading p {font-size: 14px;}
+section.main_bottom .float_row > div .absole_line_h {margin-top:0; top:30px;}
+
+footer {background: #000;height: 5vh;text-align: center;}
+footer p {line-height: 5vh; font-size: 14px;}
+
+main * {color: #000;}
+main.about {padding: 100px 0; background-color:#fcfcfc;}
+section.project .project_list {overflow:hidden;}
+section.project .project_list li{ float: left; width: 25%; border: 1px solid var(--opacity-white-line); height: 370px; border-right:none; position:relative;}
+section.project .project_list li:nth-child(4n) {border-right: 1px solid var(--border);}
+section.project .project_list li .overlay {opacity: 0; width: 100%; height: 100%; background-color:rgba(0,0,0,0.7); position: absolute; top:0; left:0; z-index: 3; overflow: hidden; text-align: center; transition: .4s;}
+section.project .project_list li .overlay i {position: relative; display: inline-block; top: 50%;  transform: translateY(-50%); color:#fff; font-size: 20px; width: 50px; height: 50px; line-height: 45px; text-align: center; border:2px solid #fff; border-radius: 50%;}
+section.project .project_list li:hover .overlay {opacity:1;}
+section.project .project_list li.active .overlay {opacity:1;}
