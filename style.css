@@ -6,6 +6,7 @@
 @import url("css/basis.css");
 @import url("css/kboard-css.css");
 @import url("css/simple-grid.css");
+@import url("css/shape.css");
 
 /* default css */
 html, body, div, span, applet, object, iframe,
@@ -99,6 +100,12 @@ main.contact_page {padding: 100px 0;}
 main.contact_page .sub_layout_right {height: auto;}
 
 /* about_page */
+.conts {text-align: left !important; padding: 0 30px;}
+.conts li {display: table;}
+.conts li span {display: table-cell;}
+.conts li span.tit {padding: 15px 0; min-width: 150px; font-weight: bold;}
+.side-menu-cover {position: relative;}
+.side-menu {position: fixed; z-index: 10; top:0; left:50%; margin-left:-550px; top: 30px;}
 main.about_page {padding: 100px 0;}
 .sub_layout .sub_layout_left .side-menu {}
 .sub_layout .sub_layout_left .side-menu li {position: relative;}
@@ -107,7 +114,15 @@ main.about_page {padding: 100px 0;}
 .sub_layout .sub_layout_left .side-menu li.active h3:after,.sub_layout .sub_layout_left .side-menu li.active h4:after {content: ''; position: absolute; width: 100%; height: 6px; background-color: var(--point-color); top:50%; left:0; transform:translateY(-50%); z-index: -1; margin-top: -3px;}
 .sub_layout .sub_layout_left .side-menu li.active h3,.sub_layout .sub_layout_left .side-menu li.active h4 {color:var(--dark-black);}
 .sub_layout .sub_layout_left .side-menu li span.kr {font-size: 13px; vertical-align: top; letter-spacing: -1px; color: inherit;}
-main.about_page .sub_layout .sub_layout_right article {height: 300px; width: 100%; background-color:#eee; margin-bottom: 50px;}
+main.about_page .sub_layout .sub_layout_right article {min-height: 300px; width: 100%; margin-bottom: 50px; border-bottom: 2px solid var(--bg-right-gray);}
+main.about_page article.about_1 {text-align: center;}
+.shape_box {display: inline-block; transform: translate(-25%);}
+.shape_box .pointer {display: inline-block; text-align: center;}
+.shape_box .pointer span {font-size: 25px; font-weight: bold; color:var(--ft-white); line-height:100px; display: inline-block; margin-top: -10px; width: 100%; margin-right: -45px; }
+.shape_box .pointer:nth-child(2) {left:40px;} .shape_box .pointer:nth-child(3) {left: 80px;} .shape_box .pointer:nth-child(4) {left: 120px;}
+main.about_page article h3 {text-align: center; font-size: 18px;padding-bottom: 20px; font-weight: bold;}
+main.about_page article.about_1 ul {text-align: left; margin: 30px 0;}
+main.about_page article.about_1 ul li {margin-bottom: 8px;}
 
 /* banner */
 .links_banner { background-color: var(--dark-black); margin: 0 auto; position: relative; font-size: 0; display: table; text-align: center; width: 100%; overflow: hidden; vertical-align: middle;}

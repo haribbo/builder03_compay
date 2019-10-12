@@ -1,0 +1,28 @@
+.pointer {
+  width: 100px;
+  height: 80px;
+  position: relative;
+  background: var(--point-color);
+}
+.pointer:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 40px solid white;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+}
+.pointer:before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 41px solid var(--point-color);
+  border-top: 41px solid transparent;
+  border-bottom: 41px solid transparent;
+}
