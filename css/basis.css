@@ -1,7 +1,7 @@
 :root {
   --dark-black:#090809;
   --ft-sub:#444;
-  --right-black:#222;
+  --right-black:rgb(13, 19, 25);
   --ft-white:#fff;
   --point-color:#0048ff;
   --sub-color:#2b462a;
@@ -10,17 +10,17 @@
   --bg-point:#1b1c12;
   --max-width:1100px;
   --box_shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
-  --opacity-white-line: rgba(255,255,255,0.15);
+  --opacity-white-line: rgba(255,255,255,0.1);
 }
 
 /* font-family: 'Big Shoulders Text', cursive;
 font-family: 'Russo One', sans-serif; */
 
-.max-width {width: var(--max-width); margin:0 auto;}
+.max-width {max-width: var(--max-width); margin:0 auto;}
 /* section_heading */
-.section_heading  {text-align: center; padding: 40px 0 80px 0; position: relative;}
-.section_heading h2,.section_tit { font-size: 40px; margin: 10px 0 10px 0; line-height: 1.4; letter-spacing: 1.5px;}
-.section_heading p  {max-width: 400px; margin: 0 auto; font-weight: bold; font-size: 15px; text-transform: uppercase;letter-spacing: -1px;}
+.section_heading  {text-align: center; padding: 40px 0 80px 0; position: relative; color:var(--bg-point);}
+.section_heading h2,.section_tit { font-size: 40px; margin: 10px 0 10px 0; line-height: 1.4; letter-spacing: 1.5px; color: inherit;}
+.section_heading p  {max-width: 400px; margin: 0 auto; font-weight: bold; font-size: 15px; text-transform: uppercase;letter-spacing: -1px; color:inherit;}
 .section_heading .absole_line_h {height: 18px; overflow: hidden;}
 .section_heading .absole_line_h:after {background-color:var(--point-color); width: 60px; height: 12px; transform: rotate(-50deg); transform-origin: center; margin-left: -30px; top:25%; }
 /* heading */
@@ -36,12 +36,17 @@ font-family: 'Russo One', sans-serif; */
 /* sub_page_showcase */
 /*css 소스 예:
 .sub_page_showcase.aubout_showcase :background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/aboutus/aboutus_showcase.jpg') no-repeat center/cover; */
-.sub_page_showcase {width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table;}
-.sub_page_showcase .inner {display: table-cell; vertical-align: middle; color:var(--bg-right-gray);}
+.sub_page_showcase {width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table; position: relative;}
+.sub_page_showcase .inner {display: table-cell; vertical-align: middle; color:var(--bg-right-gray); width: 100%;}
 .sub_page_showcase h2 {margin: 8px; font-size: 37px; max-width: 1100px; margin: 0 auto; font-family: 'Russo One', sans-serif !important;}
 /* .sub_page_showcase p .dash {margin: 0 8px; font-weight: bold;} */
 .sub_page_showcase p {color:var(--point-color) !important;  font-size: 18px;}
 .sub_page_showcase h2,.sub_page_showcase h2 p {color:inherit !important;}
+/* builder3 */
+.line_overlay{position: relative; z-index: 30; width: 100%; position: absolute; top:0;  height: 350px; left:0;}
+.line_overlay .line_overlay_inner {max-width: 1100px; margin: 0 auto; height: inherit;}
+.line_overlay .line_overlay_inner > div {border-left:1px solid var(--opacity-white-line); flex-basis: 25%; max-width: 25%; overflow: hidden; position: relative; height: inherit;}
+.line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line);}
 
 /* absole line */
 .absole_line_v {position: relative;}
@@ -53,14 +58,14 @@ font-family: 'Russo One', sans-serif; */
 .absole_line_h.bottom_h:after {bottom: -8px;}
 
 /* root site 걍로 */
-.root_cover {position: relative;}
-.root {height: 50px; width: 100%; background-color: rgba(0,0,0,.8); position: absolute; bottom:0; left:0; }
+.root_cover { position: relative;}
+.root {height: 40px; width: 100%;  background: rgba(13, 19, 25, 0.38); position: absolute; width: 100%; left:0; bottom: 0;}
 .root ul {margin: 0 auto; max-width: var(--max-width); border-left: 1px solid var(--opacity-white-line); border-right: 1px solid var(--opacity-white-line); overflow: hidden;}
-.root ul li {line-height: 50px; color:var(--bg-right-gray); font-size: 16px; text-align: left !important; float: left; padding: 0 20px; border-right: 1px solid var(--opacity-white-line);}
-.root ul li a {color:rgba(255,255,255,0.65); transition: .3s;}
+.root ul li {line-height: 40px; color:var(--bg-right-gray); text-align: center !important; float: left; padding: 0 20px; border-right: 1px solid var(--opacity-white-line); width: 137.5px; position: relative;}
+.root ul li a {color:var(--ft-sub); transition: .3s;  font-size: 16px; font-weight: bold;}
 .root ul li a:hover {color:rgba(255,255,255,0.9);}
 .root ul li i {color:inherit; display: inline-block; margin-right: 8px;}
 
 /*  */
-.placeholder {display: table; height: 100%; width: 100%; background-color: #f4f4f4;}
+.placeholder {display: table; height: 100%; width: 100%; background-color: #f5f5f5;}
 .placeholder .placeholder_txt {display: table-cell; vertical-align: middle; text-align: center; font-weight: bold; color: #999; text-transform: uppercase; font-family: 'Patua One';}
