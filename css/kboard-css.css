@@ -1,4 +1,68 @@
 
+/* ------------------------------- input --------------------------- */
+/* 필수로 필요한 css , 선택은 선택사항 */
+/*다른곳에 있다면 바꾸거나 지우기)*/
+:root {--input-point:#777; --label-point:#444;}
+/*다른곳에 있다면 바꾸거나 지우기)*/
+
+.input_fields,section.input_fields {margin: 0 auto;}
+.input_fields:after {content: ''; display: block; overflow: hidden; clear: both; display: table;}
+.input_border {border-bottom: 1px solid #ccc;}
+.input_wide {width: 100%;}
+.input_row{ max-width: 100%; margin-bottom: 30px; line-height:1!important; padding: 0 15px 30px 15px;}
+.input_row.radio_row {display:table; }
+
+/* input custom reset 필수*/
+button {border:none; background: none; cursor: pointer;}
+input,textarea {border:none; border-bottom:2px solid #ccc; height: 40px; background-color:#fafafa; padding: 10px; outline: none; display:inline-block; width:100%;}
+textarea {resize: none; min-height: 150px;}
+input:focus { border-bottom: 3px solid var(--input-point);}
+textarea:focus{border-color: var(--input-point);}
+input[type="radio"] {-webkit-appearance: none;  -moz-appearance: none; appearance: none;}
+
+/* input label align 필수*/
+.label_inner,label > span {margin-bottom: 10px; margin-left: 8px; display:block; width: 100%; position: relative; font-size: 18px; font-weight: bold; line-height: 1 !important;}
+.label_inner_inline { display: inline; margin-bottom: 10px; margin-left: 8px; position: relative; font-size: 18px; font-weight: bold; margin-right: 8px;}
+/* input label deco  선택 */
+.label_inner:after,.label_inner_inline:after {content:''; width: 3px; height: 100%; background: var(--label-point); position: absolute; top:0; left: -8px; z-index: 3;}
+
+/* input layout 선택*/
+.input_fields {display: flex; flex-wrap: wrap; margin-left: -15px; margin-right:15px;
+  box-sizing: border-box; display: -ms-flexbox; display: -webkit-box; display: flex; -ms-flex: 0 1 auto; -webkit-box-flex: 0;
+  flex: 0 1 auto; -ms-flex-direction: row; -webkit-box-orient: horizontal; -webkit-box-direction: normal; flex-direction: row; -ms-flex-wrap: wrap;flex-wrap: wrap;}
+.input_row[class*="devide_"] {display: inline-block;  font-size: 0; overflow: hidden;}
+.input_row.devide_2 {width: 50%; flex-basis: 50%;} .input_row.devide_3 {width: 33.333%; flex-basis: 33.3333%;}
+.input_row[class*="devide_"] > div, .input_row[class*="devide_"] > span, .input_row[class*="devide_"] > label {width: 100%:}
+
+/* input label,font,input custom (셀렉트포함, 라디오박스 포함) 선택*/
+.input_row label,.input_row label .label_inner{position: relative;}
+.input_row label select {border: 1px solid #ddd; line-height: 40px; padding: 10px 20px; color:#333; background-color:#fafafa; outline: none; position: relative; position:relative;}
+.input_row label select option {font-size: 18px; color:inherit; padding: 15px 20px; font-weight: normal; margin-bottom: 8px; position: relative;}
+/* radio*/
+input[type="radio"] {width: 15px; height: 15px; border: 1px solid #ddd; position: relative; border-radius: 50%; box-sizing: content-box; padding: 3px;  vertical-align: middle; vertical-align: middle; line-height: 1 !important;}
+input[type="radio"]:checked,input[type="radio"]:focus {}
+input[type="radio"]:checked:before,input[type="radio"]:focus:before
+{content:''; display: inline-block; width: 100%; height: 100%; background-color: var(--input-point); border-radius: 50%; width: 70%; height: 70%; position: absolute; top:0; left:0; top: 15%; left: 15%;}
+input[type="radio"]+span {display: inline-block; padding: 0 15px 0 5px;vertical-align: middle; line-height: 1!important;position: relative; top: 2px;}
+
+/* privacy 약관 선택 */
+.privacy_txt { height: 100px; text-overflow: ellipsis; overflow: auto; border: 1px solid #e3e3e3; padding: 15px;}
+.privacy_row { padding: 10px; margin: var(--container-paddiing); margin-bottom: 30px;}
+
+/* 기본 kboard용 선택 */
+/* .kboard-attr-row {margin:0 5%; padding-bottom: 30px; max-width: 100%; margin-bottom: 30px;}
+label > span  {display: inline-block; width: auto; line-height: 1 !important;}
+label > span+span { display: inline; width: auto; line-height: 1 !important;}
+br {display: block; width: 100%;} */
+
+@media (max-width:900px) {
+  .input_fields {display: block; margin: 0 auto; padding: 0 5%;}
+  .input_row {width: 100%;}
+  .input_row.devide_2 {width: 100%;} .input_row.devide_3 {width: 100%;}
+}
+
+/* ------------------------------- input --------------------------- */
+
 /* 공통 헤더 (검색 정렬) */
 #global_list p,#global_list a,#global_list span{font-family: 'Nanum Gothic'; }
 #global_list h1,h2,h3,h4,h5,h6 { font-family: 'NanumSquare';}
@@ -23,28 +87,10 @@ div.solid_cate_cover ul.solid_cate li a {display: inline-block; padding: 15px 20
   div.solid_cate_cover ul.solid_cate li {width:50%;}
 }
 
-/* 공통 체크박스 */
- .kboard-attr-row.kboard-attr-radio .attr-value .attr-value-label,
- .kboard-attr-row.kboard-attr-checkbox .attr-value .attr-value-label
-{ -webkit-user-select: none; -moz-user-select: none;-ms-user-select: none; user-select: none; position: relative;}
- .kboard-attr-row.kboard-attr-radio .attr-value .attr-value-label input,
- .kboard-attr-row.kboard-attr-checkbox .attr-value .attr-value-label input
-{height: 0; width: 0; margin-left: 30px; transition: .2s;}
- .kboard-attr-row.kboard-attr-radio .attr-value .attr-value-label input:before,
- .kboard-attr-row.kboard-attr-checkbox .attr-value .attr-value-label input:before
-{content: ''; width: 20px; height: 20px; left:3px; top:0; margin-top:6px; position: absolute; display: inline-block;
-border: 4px solid var(--grey-light1); background-color: var(--grey-light1); outline: 2px solid var(--grey-light3);}
- .kboard-attr-row.kboard-attr-radio .attr-value .attr-value-label input:after {}
- .kboard-attr-row.kboard-attr-radio .attr-value .attr-value-label input:checked:before,
- .kboard-attr-row.kboard-attr-checkbox .attr-value .attr-value-label input:checked:before
-{background-color: var(--color-primary); outline: 2px solid var(--color-primary);}
- .kboard-attr-row.kboard-attr-checkbox .attr-value .attr-value-label input:before {margin-top:0;}
-
-
  /* 공통 pageNatin */
  .global_pagination { width: 100%; text-align: center; margin-top: 50px;}
  .global_pagination ul {display: inline-block; padding: 20px 0;}
- .global_pagination ul li{float: left; width: 30px; height: 30px; text-align: center;  margin: 0 4px; background-color: var(--bg-right-gray); }
+ .global_pagination ul li{float: left; width: 30px; height: 30px; text-align: center;  margin: 0 4px; background-color: var(--bg-right-gray);  border: 2px solid var(--ft-sub);}
  .global_pagination ul li > a {display: inline-block; font-weight: 400; vertical-align: text-top;     color: var(--dark-black); }
  .global_pagination ul li.active {border: 1px solid var(--point-color) !important; background-color: var(--point-color);}
  .global_pagination ul li.active a {color: #fff; font-weight: bold;}
@@ -72,10 +118,9 @@ border: 4px solid var(--grey-light1); background-color: var(--grey-light1); outl
 
 /* 공통 btn */
 .user_btn {text-align: center; margin: 50px 0; text-align: center;}
-.admin_btn_box2.grid_row {border-top: 1px solid var(--border); }
+.admin_btn_box2.grid_row,.admin_btn_box2 {border-top: 1px solid var(--border); }
 .admin_btn_box2.grid_row { max-width: 1000px; margin: 0 auto; padding: 10px; vertical-align: middle;}
-.admin_btn_box2.grid_row .point_btn {background-color: var(--sub-green);}
-
+.admin_btn_box2.grid_row .point_btn,.admin_btn_box2 .point_btn {background-color: var(--sub-green); margin-top: 30px;}
 
  /* ***************************************************************************************************************** */
 
@@ -120,7 +165,7 @@ main.notice_page { padding: 100px 0;}
 
 .notice_board .notice_board_heading {border-top: 1px solid var(--border); border-bottom: 3px solid var(--border); text-align: center; padding: 15px 0; font-weight: bold;}
 .notice_board > ul >{}
-.notice_board > ul > li.admin_notice {background: var(--point-rgb-color);}
+.notice_board > ul > li.admin_notice {background: var(--input-point);}
 .notice_board > ul > li.admin_notice .admin_tag { background-color: #ff3860; font-size: 12px; border-radius: 4px; display: inline; padding: 3px 9px; color:var(--bg-right-gray); margin-right: 8px;}
 .notice_board > ul > li .new_tag {background-color: #209cee; font-size: 12px; border-radius: 4px; display: inline; padding: 3px 9px; color:var(--bg-right-gray); margin-right: 8px;}
 .notice_board > ul > li {border-bottom: 1px solid var(--border); padding: 15px 0;}
@@ -163,7 +208,7 @@ main.notice_page { padding: 100px 0;}
     .notice_board.img_board.magazin_board .notice_board_row > div  { width: 100%; background:#fff; }
 
     .global_pagination ul {text-align: center;}
-    .global_pagination ul li {display: inline-block;}
+    .global_pagination ul li {display: inline-block; b}
     .global_pagination ul li.first-page,.global_pagination li.last-page {display: inline-block;}
     .global_document {padding: 0 5%;}
   }

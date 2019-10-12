@@ -4,19 +4,28 @@
   --right-black:rgb(13, 19, 25);
   --ft-white:#fff;
   --point-color:#0048ff;
-  --sub-color:#2b462a;
+  --sub-color:#29eb65;
   --point-rgb-color:rgba(23,33,123,0.6);
   --border:#e3e3e3;
   --bg-point:#1b1c12;
   --max-width:1100px;
   --box_shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
-  --opacity-white-line: rgba(255,255,255,0.1);
+  --opacity-white-line: rgba(255,255,255,0.2);
 }
+
+@-webkit-keyframes fadeInRight {
+from {opacity: 0;left:100%;}
+to {opacity: 1; left: -15px;}}
+@keyframes fadeInRight {
+from {opacity: 0;left:100%;}
+to {opacity: 1; left: -15px;}}
 
 /* font-family: 'Big Shoulders Text', cursive;
 font-family: 'Russo One', sans-serif; */
-
+.sub_color {color:var(--sub-color) !important;}
+.point_color {color:var(--point-color) !important;}
 .max-width {max-width: var(--max-width); margin:0 auto;}
+.clearFix:after {content: ""; display: table; clear: both; overflow: hidden;}
 /* section_heading */
 .section_heading  {text-align: center; padding: 40px 0 80px 0; position: relative; color:var(--bg-point);}
 .section_heading h2,.section_tit { font-size: 40px; margin: 10px 0 10px 0; line-height: 1.4; letter-spacing: 1.5px; color: inherit;}
@@ -24,40 +33,51 @@ font-family: 'Russo One', sans-serif; */
 .section_heading .absole_line_h {height: 18px; overflow: hidden;}
 .section_heading .absole_line_h:after {background-color:var(--point-color); width: 60px; height: 12px; transform: rotate(-50deg); transform-origin: center; margin-left: -30px; top:25%; }
 /* heading */
-.small_heading { text-align: right;}
-.small_heading h2{ position: relative; font-size: 32px; color: var(--ft-white);}
-.small_heading p {color: var(--ft-white); font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
+.big_heading { text-align: right; color: var(--ft-white);}
+.big_heading h2,.small_heading h2{ position: relative; font-size: 32px; color:inherit;}
+.big_heading p {color:inherit; font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
+
+.small_heading1 { text-align: right; color: var(--ft-white);}
+.small_heading1 h2,.small_heading2 h3{ position: relative; font-size: 20px; color: inherit;}
+.small_heading1 p {color: inherit; font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
+
+.small_heading2 { text-align: right; color: var(--dark-black);}
+.small_heading2 h2,.small_heading2 h3{ position: relative; font-size: 20px; color: inherit;}
+.small_heading2 p {color: inherit; font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
 
 /* sub_heading */
 .sub_heading {text-align: center; font-size: 25px; color: var(--ft-white); margin-bottom: 80px;}
-.sub_heading h2 {color: var(--ft-color); font-weight:400;}
+.sub_heading h2 {color: inherit; font-weight:400;}
 .sub_heading h2 .sub_heading_point {font-size: inherit; color:var(--point2);}
 
 /* sub_page_showcase */
 /*css 소스 예:
 .sub_page_showcase.aubout_showcase :background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/aboutus/aboutus_showcase.jpg') no-repeat center/cover; */
-.sub_page_showcase {width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table; position: relative;}
-.sub_page_showcase .inner {display: table-cell; vertical-align: middle; color:var(--bg-right-gray); width: 100%;}
-.sub_page_showcase h2 {margin: 8px; font-size: 37px; max-width: 1100px; margin: 0 auto; font-family: 'Russo One', sans-serif !important;}
+.sub_page_showcase {color: var(--ft-white); width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table; position: relative;}
+.sub_page_showcase .inner {display: table-cell; vertical-align: middle; width: 100%;}
+.sub_page_showcase h2 { color: inherit; margin: 8px; font-size: 37px; max-width: 1100px; margin: 0 auto; font-family: 'Russo One', sans-serif !important;}
 /* .sub_page_showcase p .dash {margin: 0 8px; font-weight: bold;} */
 .sub_page_showcase p {color:var(--point-color) !important;  font-size: 18px;}
-.sub_page_showcase h2,.sub_page_showcase h2 p {color:inherit !important;}
+
 /* builder3 */
 .line_overlay{position: relative; z-index: 30; width: 100%; position: absolute; top:0;  height: 350px; left:0;}
 .line_overlay .line_overlay_inner {max-width: 1100px; margin: 0 auto; height: inherit;}
 .line_overlay .line_overlay_inner > div {border-left:1px solid var(--opacity-white-line); flex-basis: 25%; max-width: 25%; overflow: hidden; position: relative; height: inherit;}
-.line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line);}
+.line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line); position: relative; display: table;}
+.line_overlay .ani_tit {vertical-align: middle; display: table-cell; position: relative;  left:100%; transition: 0.3s;}
+.ani_tit{ -webkit-animation-name: fadeInRight; animation-name: fadeInRight; animation-delay: 0.1s;   -webkit-animation-duration: 1s; animation-duration: 0.7s;
+-webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; animation-timing-function: cubic-bezier(.47,.55,.16,1.1);}
 
 /* absole line */
 .absole_line_v {position: relative;}
-.absole_line_v:after {content:''; width: 2px; height: 100%; background-color: var(--ft-white); position: absolute; top:0}
-.absole_line_v.left_v:after {left: -8px;}
-.absole_line_v.right_v:after {right:-8px;}
+.absole_line_v:after {content:''; width: 4px; height: 100%; background-color: var(--point-color); position: absolute; top:0}
+/* .absole_line_v.left_v:after {left: -8px;}
+.absole_line_v.right_v:after {right:-8px;} */
 .absole_line_h {position: relative;}
-.absole_line_h:after {content:''; width: 100%; height: 2px; background-color: var(--ft-white); position: absolute; left:50%; transform: translate(-50%); z-index: 3;}
-.absole_line_h.bottom_h:after {bottom: -8px;}
+.absole_line_h:after {content:''; width: 100%; height: 2px;background-color: var(--point-color); position: absolute; left:50%; transform: translate(-50%); z-index: 3;}
+/* .absole_line_h.bottom_h:after {bottom: -8px;} */
 
-/* root site 걍로 */
+/* root site 경로 */
 .root_cover { position: relative;}
 .root {height: 40px; width: 100%;  background: rgba(13, 19, 25, 0.38); position: absolute; width: 100%; left:0; bottom: 0;}
 .root ul {margin: 0 auto; max-width: var(--max-width); border-left: 1px solid var(--opacity-white-line); border-right: 1px solid var(--opacity-white-line); overflow: hidden;}
@@ -66,6 +86,22 @@ font-family: 'Russo One', sans-serif; */
 .root ul li a:hover {color:rgba(255,255,255,0.9);}
 .root ul li i {color:inherit; display: inline-block; margin-right: 8px;}
 
-/*  */
+/* 이미지 placeholder */
 .placeholder {display: table; height: 100%; width: 100%; background-color: #f5f5f5;}
 .placeholder .placeholder_txt {display: table-cell; vertical-align: middle; text-align: center; font-weight: bold; color: #999; text-transform: uppercase; font-family: 'Patua One';}
+
+/* main-efect */
+.btn_case {text-align: center; padding: 30px 0;}
+.main_card { background-color: #ccc; height: 200px; border-radius: 2px; position: relative; b}
+.main_card:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23); transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
+.main_btn {overflow: hidden; position:relative; color:var(--right-black);   border: 2px solid var(--right-black); display: inline-block;  z-index: 3; line-height: 1; font-size: 14px; padding: 7px 15px;}
+.main_btn:hover {color:#fff; border-color:var(--point-color);}
+.main_btn:after { background: var(--point-color);content: ''; position: absolute; width: 0%; height: 100%; z-index: -1; transform: translateX(-50%); top:0; left:50%;  transition: 0.3s;}
+.main_btn:hover:after {width: 100%; }
+/* imag tag */
+.img_tag,.card_tag {position: absolute;  z-index: 1; white-space: nowrap; padding: 1rem; background:#fff; font-weight: 400; text-align: center;}
+.img_tag.right,.card_tag.right{ right:0; bottom:0;}
+.img_tag.left,.card_tag.left {left:0; bottom:0}
+.img_tag.leftT,.card_tag.leftT {left:0; top:0;}
+.img_tag.rightT,.card_tag.rightT {right:0; top:0}
+.img_tag.wide,.card_tag.wide {width: 100%; left:0;}

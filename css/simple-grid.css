@@ -57,3 +57,40 @@ align-items: flex-start;
 @media (max-width:720px) {
   .float_row > .left,.float_row > .right,.float_row > div {float: none; width: 100%; height: auto;}
 }
+
+/* ********* layout *********** */
+:root { --lay-padding:13px; --lay-margin2:-13px; --lay-height: 260px; }
+/* 음수 마진 레이아웃 2칸짤 (컨테이너 필요)*/
+.wide_width {}
+.layout_cover2 ,ul.layout_cover2 {overflow: hidden; margin: 0 var(--lay-margin2);}
+.layout_cover2 > div,ul.layout_cover2 li {width: 50%; float: left; padding: var(--lay-padding);}
+.layout_cover2 > div,ul.layout_cover2 li {}
+/* 음수 마진 레이아웃 3칸짤 (컨테이너 필요)*/
+.wide_width {}
+div.layout_cover3,ul.layout_cover3 {overflow: hidden; margin: 0 var(--lay-margin2);}
+div.layout_cover3 > div,ul.layout_cover3 li {width: 33.33333%; float: left; padding: var(--lay-padding);}
+div.layout_cover3 > div,ul.layout_cover3 li {}
+/* 음수 마진 레이아웃 4칸짤 (컨테이너 필요)*/
+.wide_width {}
+div.layout_cover4,ul.layout_cover4 {overflow: hidden; margin: 0 var(--lay-margin2);}
+div.layout_cover4 > div,ul.layout_cover4 li {width: 25%; float: left; padding: var(--lay-padding);}
+div.layout_cover4 > div,ul.layout_cover4 li {}
+@media (max-width:900px) {
+div.layout_cover2,div.layout_cover3,div.layout_cover4,ul.layout_cover2,ul.layout_cover3,ul.layout_cover4
+{margin: 0; padding: 0 5%;}
+div.layout_cover2 > div,div.layout_cover3 > div,div.layout_cover4 > div
+ul.layout_cover2 li,ul.layout_cover3 li,ul.layout_cover4 li
+ {float: none; width: 100%; margin-bottom: 3%;}
+}
+/********** layour ************/
+
+/* sub_page layout*/
+.sub_layout {margin-top: 30px; overflow: hidden; border-bottom: 1px solid var(--border);}
+.sub_layout:last-child {border-bottom: none;}
+.sub_layout:first-child {border-bottom: 1px solid var(--border); }
+.sub_layout .sub_layout_left {width: 320px; float: left;}
+.sub_layout .sub_layout_right {padding-left: 320px; width: 100%;}
+/* sub_page layout heding*/
+.sub_layout h4 {font-size: 20px; margin-bottom: 20px; color:var(--dark-black);}
+.sub_layout p {margin-bottom: 8px;}
+/* sub_page layout*/
