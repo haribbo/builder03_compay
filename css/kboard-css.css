@@ -2,7 +2,7 @@
 /* ------------------------------- input --------------------------- */
 /* 필수로 필요한 css , 선택은 선택사항 */
 /*다른곳에 있다면 바꾸거나 지우기)*/
-:root {--input-point:#777; --label-point:#444;}
+ :root {--input-point:#777; /*--label-point:#444; */ --label-point:#0c1217}
 /*다른곳에 있다면 바꾸거나 지우기)*/
 
 .input_fields,section.input_fields {margin: 0 auto;}

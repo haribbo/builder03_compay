@@ -51,11 +51,19 @@ flex-basis: 33.333%; max-width: 33.333%;
 -webkit-box-align: start;
 align-items: flex-start;
  */
-.float_row {}
+/* .float_row {}
 .float_row:after {content: ""; display: table; clear: both; clear: both; overflow: hidden;}
 .float_row > .left,.float_row > .right {width: 50%; float: left;}
 @media (max-width:720px) {
   .float_row > .left,.float_row > .right,.float_row > div {float: none; width: 100%; height: auto;}
+} */
+.layout_float {float: left; width: 100%;}
+.layout_float:after {content: ""; display: table; clear: both; clear: both; overflow: hidden;}
+.layout_float > div {width: 50%; position: relative;}
+.layout_float > div:first-child {float: left;}
+.layout_float > div:last-child {float: right;}
+@media (max-width:720px) {
+  .layout_float > div {float: none; width: 100%; height: auto;}
 }
 
 /* ********* layout *********** */
@@ -67,7 +75,7 @@ align-items: flex-start;
 .layout_cover2 > div,ul.layout_cover2 li {}
 /* 음수 마진 레이아웃 3칸짤 (컨테이너 필요)*/
 .wide_width {}
-div.layout_cover3,ul.layout_cover3 {overflow: hidden; margin: 0 var(--lay-margin2);}
+div.layout_cover3,ul.layout_cover3{overflow: hidden; margin: 0 var(--lay-margin2);}
 div.layout_cover3 > div,ul.layout_cover3 li {width: 33.33333%; float: left; padding: var(--lay-padding);}
 div.layout_cover3 > div,ul.layout_cover3 li {}
 /* 음수 마진 레이아웃 4칸짤 (컨테이너 필요)*/
