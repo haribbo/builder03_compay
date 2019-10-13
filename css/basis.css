@@ -68,7 +68,7 @@ font-family: 'Russo One', sans-serif; */
 .line_overlay{position: relative; z-index: 30; width: 100%; position: absolute; top:0;  height: 350px; left:0;}
 .line_overlay .line_overlay_inner {max-width: 1100px; margin: 0 auto; height: inherit;}
 .line_overlay .line_overlay_inner > div {border-left:1px solid var(--opacity-white-line); flex-basis: 25%; max-width: 25%; overflow: hidden; position: relative; height: inherit;}
-.line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line); position: relative; display: table;}
+.line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line); position: relative; display: table; width: 100%;}
 .line_overlay .ani_tit {vertical-align: middle; display: table-cell; position: relative;  left:100%; transition: 0.3s;}
 .ani_tit{ -webkit-animation-name: fadeInRight; animation-name: fadeInRight; animation-delay: 0.1s;   -webkit-animation-duration: 1s; animation-duration: 0.7s;
 -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; animation-timing-function: cubic-bezier(.47,.55,.16,1.1);}
