@@ -94,3 +94,32 @@ section.main_bottom .float_row > div .small_heading { position: absolute; right:
 section.main_bottom .float_row > div .small_heading h2 {font-size: 20px;}
 section.main_bottom .float_row > div .small_heading p {font-size: 14px;}
 section.main_bottom .float_row > div .absole_line_h {margin-top:0; top:30px;}
+
+
+
+<section class="business_intro">
+  <div class="grid_row">
+    <div class="col-4">
+      <i class="xi-share-alt-o xi-2x"></i>
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="col-4">
+      <i class="xi-lightbulb-o xi-2x"></i>
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="col-4">
+      <i class="xi-message-o xi-2x"></i>
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</seciton>
+
+main.business_page {}
+section.business_intro .grid_row {max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 10; padding-bottom: 100px;}
+section.business_intro .grid_row [class^="col"] {text-align: center;}
+section.business_intro .grid_row i { display: inline-block; width: 70px; height: 70px; background: var(--sub-color); line-height: 70px; border-radius: 50%;}
+section.business_intro .grid_row h3 {margin: 15px 0; font-size: 18px; font-weight: bold;}
+section.business_intro .grid_row p {max-width: 200px; margin: 0 auto; line-height: 1.2;}

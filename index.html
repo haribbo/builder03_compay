@@ -8,7 +8,44 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" charset="utf-8"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <title>black Markeitng Copany</title>
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,40 +62,107 @@
       </ul>
     </nav>
   </header>
-  <section class="main_top">
-    <div class="flex_row">
-      <div class="marketing">>
-        <div class="small_heading1">
-          <p>Marketing</p>
-          <h2>마케팅</h2>
+  <!-- slider -->
+  <div class="swiper-container index_page">
+    <div class="swiper-wrapper">
+      <section class="main_top swiper-slide">
+        <div class="swiper-inner">
+          <div class="marketing">
+            <div class="small_heading1">
+              <p>Marketing</p>
+              <h2>마케팅</h2>
+            </div>
+          </div>
+          <div class="sns">
+            <div class="small_heading1">
+              <p>SNS</p>
+              <h2>소셜네트워크</h2>
+            </div>
+          </div>
+          <div class="blog ">
+            <div class="small_heading1">
+              <p>blog</p>
+              <h2>블로그</h2>
+            </div>
+          </div>
+          <div class="webSite">
+            <div class="small_heading1">
+              <p>Website</p>
+              <h2>웹사이트</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="sns active">
-        <div class="small_heading1">
-          <p>SNS</p>
-          <h2>소셜네트워크</h2>
+      </section>
+      <section class="main_top swiper-slide">
+        <div class="swiper-inner">
+          <div class="marketing">>
+            <div class="small_heading1">
+              <p>Marketing</p>
+              <h2>마케팅</h2>
+            </div>
+          </div>
+          <div class="sns">
+            <div class="small_heading1">
+              <p>SNS</p>
+              <h2>소셜네트워크</h2>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="small_heading1">
+              <p>blog</p>
+              <h2>블로그</h2>
+            </div>
+          </div>
+          <div class="webSite">
+            <div class="small_heading1">
+              <p>Website</p>
+              <h2>웹사이트</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="blog">
-        <div class="small_heading1">
-          <p>blog</p>
-          <h2>블로그</h2>
+      </section>
+      <section class="main_top swiper-slide">
+        <div class="swiper-inner">
+          <div class="marketing">>
+            <div class="small_heading1">
+              <p>Marketing</p>
+              <h2>마케팅</h2>
+            </div>
+          </div>
+          <div class="sns">
+            <div class="small_heading1">
+              <p>SNS</p>
+              <h2>소셜네트워크</h2>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="small_heading1">
+              <p>blog</p>
+              <h2>블로그</h2>
+            </div>
+          </div>
+          <div class="webSite">
+            <div class="small_heading1">
+              <p>Website</p>
+              <h2>웹사이트</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="webSite">
-        <div class="small_heading1">
-          <p>Website</p>
-          <h2>웹사이트</h2>
-        </div>
-      </div>
+      </section>
     </div>
-  </section>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- slider -->
+  <div class="mouse_ani">
+    <i class="xi-mouse"></i>
+  </div>
   <section class="links_banner">
     <div class="links_banner_left">
-        <div class="small_heading1">
-          <h2>사업분야</h2>
-          <p>노마드의 사업분야 및 마케팅에 대해 알아보세요</p>
-        </div>
+      <div class="small_heading1">
+        <h2>사업분야</h2>
+        <p>노마드의 사업분야 및 마케팅에 대해 알아보세요</p>
+      </div>
     </div>
     <div class="links_banner_right">
       <div class="small_heading1">
@@ -67,9 +171,22 @@
       </div>
     </div>
   </section>
+
   <footer>
     <p><span class="point_color">NOMA<span class="sub_color">DE</span></span>Copyright (c) 2019 Copyright Holder All Rights Reserved.</p>
   </footer>
 </body>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
 
 </html>

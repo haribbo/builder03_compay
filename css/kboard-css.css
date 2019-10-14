@@ -2,7 +2,19 @@
 /* ------------------------------- input --------------------------- */
 /* 필수로 필요한 css , 선택은 선택사항 */
 /*다른곳에 있다면 바꾸거나 지우기)*/
- :root {--input-point:#777; /*--label-point:#444; */ --label-point:#0c1217}
+ :root {
+   --input-point:#777;
+   --label-point:#0c1217;
+   --notice-border:#29eb65;
+   --notice-input-border-color:#ccc;
+   --notice-heading-bg:#f6f6f6;
+   --notice-heading-border-top:#29eb65;
+   --notice-heading-border-bottom:#888;
+   --notice-heading-ft-color:#29eb65;
+   --notice-row-border:#e3e3e3;
+   --notice-row-padding: 20px;;
+
+ }
 /*다른곳에 있다면 바꾸거나 지우기)*/
 
 .input_fields,section.input_fields {margin: 0 auto;}
@@ -10,11 +22,15 @@
 .input_border {border-bottom: 1px solid #ccc;}
 .input_wide {width: 100%;}
 .input_row{ max-width: 100%; margin-bottom: 30px; line-height:1!important; padding: 0 15px 30px 15px;}
+.input_row[class*="align_"] {display: block!important;}
+.input_row.align_center {margin: 0 auto;}
+.input_row.align_right {text-align: right;}
+.input_row.align_left {text-align: left;}
 .input_row.radio_row {display:table; }
 
 /* input custom reset 필수*/
 button {border:none; background: none; cursor: pointer;}
-input,textarea {border:none; border-bottom:2px solid #ccc; height: 40px; background-color:#fafafa; padding: 10px; outline: none; display:inline-block; width:100%;}
+input,textarea {border:none; border-bottom:2px solid var(--notice-input-border-color); height: 40px; background-color:#fafafa; padding: 10px; outline: none; display:inline-block; width:100%;}
 textarea {resize: none; min-height: 150px;}
 input:focus { border-bottom: 3px solid var(--input-point);}
 textarea:focus{border-color: var(--input-point);}
@@ -36,7 +52,7 @@ input[type="radio"] {-webkit-appearance: none;  -moz-appearance: none; appearanc
 
 /* input label,font,input custom (셀렉트포함, 라디오박스 포함) 선택*/
 .input_row label,.input_row label .label_inner{position: relative;}
-.input_row label select {border: 1px solid #ddd; line-height: 40px; padding: 10px 20px; color:#333; background-color:#fafafa; outline: none; position: relative; position:relative;}
+.input_row label select,.input_row select {border: 1px solid #ddd; line-height: 40px; padding: 10px 20px; color:#333; background-color:#fafafa; outline: none; position: relative; position:relative;}
 .input_row label select option {font-size: 18px; color:inherit; padding: 15px 20px; font-weight: normal; margin-bottom: 8px; position: relative;}
 /* radio*/
 input[type="radio"] {width: 15px; height: 15px; border: 1px solid #ddd; position: relative; border-radius: 50%; box-sizing: content-box; padding: 3px;  vertical-align: middle; vertical-align: middle; line-height: 1 !important;}
@@ -62,6 +78,15 @@ br {display: block; width: 100%;} */
 }
 
 /* ------------------------------- input --------------------------- */
+
+
+/* input SearchBar */
+.notice_board .input_row.search_bar  {vertical-align: middle;}
+.notice_board .input_row.search_bar select {max-width: 30%; max-width: 150px;}
+.notice_board .input_row.search_bar input{ max-width: 40%; margin: 0 3%; position: relative; top:-5px;}
+.notice_board .input_row.search_bar input:hover,.notice_board .search_bar input:focus {border-width: 2px;}
+.notice_board .input_row.search_bar button[type="submit"]{outline: none; color: var(--notice-heading-border-bottom); font-weight: bold; border:2px solid #ddd; height: 39px; display: inline-block; padding: 0 2%;}
+.notice_board .input_row.search_bar button[type="submit"] i {font-weight: bold; color:inherit;}
 
 /* 공통 헤더 (검색 정렬) */
 #global_list p,#global_list a,#global_list span{font-family: 'Nanum Gothic'; }
@@ -89,9 +114,9 @@ div.solid_cate_cover ul.solid_cate li a {display: inline-block; padding: 15px 20
 
  /* 공통 pageNatin */
  .global_pagination { width: 100%; text-align: center; margin-top: 50px;}
- .global_pagination ul {display: inline-block; padding: 20px 0;}
- .global_pagination ul li{float: left; width: 30px; height: 30px; text-align: center;  margin: 0 4px; background-color: var(--bg-right-gray);  border: 2px solid var(--ft-sub);}
- .global_pagination ul li > a {display: inline-block; font-weight: 400; vertical-align: text-top;     color: var(--dark-black); }
+ .global_pagination ul {display: inline-block; padding: 20px 0; color:var(--notice-heading-border-bottom); font-weight: bold;}
+ .global_pagination ul li{float: left; width: 30px; height: 30px; text-align: center;  margin: 0 4px; border: 2px solid var(--border);}
+ .global_pagination ul li > a {display: inline-block; font-weight: 400; vertical-align: text-top;  color:var(--notice-heading-border-bottom); font-weight: bold;}
  .global_pagination ul li.active {border: 1px solid var(--point-color) !important; background-color: var(--point-color);}
  .global_pagination ul li.active a {color: #fff; font-weight: bold;}
  .global_pagination ul li.next-page,.global_pagination li.prev-page {display: none;}
@@ -155,21 +180,24 @@ main.qna_content,div.qna_content {transition: .2s; }
 .qna ul.acodian_list li.active div.acodian_pannel {height: 100%;  padding: 20px 20px; height: auto;}
 
 /* notice board  */
-main.notice_page { padding: 100px 0;}
-.notice_board {max-width: 1000px; margin: 0 auto;}
-.notice_board .notice_board_row { display: table; width: 100%;}
-.notice_board .notice_board_row > span,.notice_board .notice_board_row > div { display: table-cell; vertical-align: middle;}
-.notice_board .notice_board_row span:first-child { width: 150px; text-align: center;}
-.notice_board .notice_board_row span:nth-child(2) { font-weight: bold;}
-.notice_board .notice_board_row span:last-child {width: 230px; text-align: center; font-size: 14px; letter-spacing: -0.5px;}
+main.notice_page {}
+.notice_board {max-width: var(--max-width); margin: 0 auto;}
+.notice_board  .notice_board_row { display: table; width: 100%; position: relative;}
+.notice_board .notice_board_row > span,.notice_board .notice_board_row > div { display: table-cell; vertical-align: middle; color:#656565; font-weight: bold;}
+.notice_board .notice_board_row span:first-child,.notice_board .notice_board_row div:first-child { width:15%; text-align: center; position: relative; }
+.notice_board .notice_board_row span:nth-child(2),.notice_board .notice_board_row div:nth-child(2) { width: 70%; font-weight: 600;}
+.notice_board .notice_board_row span:last-child {width: 15%; text-align: center; font-size: 14px; letter-spacing: -0.5px ;  font-weight: 600;}
+.notice_board .notice_board_row.notice_board_heading { padding: var(--notice-row-padding);background: var(--notice-heading-bg); border-top: 2px solid var(--notice-heading-border-top); border-bottom: 2px solid var(--notice-heading-border-bottom); font-weight: bold; text-align: center;font-weight: bold;}
 
-.notice_board .notice_board_heading {border-top: 1px solid var(--border); border-bottom: 3px solid var(--border); text-align: center; padding: 15px 0; font-weight: bold;}
 .notice_board > ul >{}
+.notice_board > ul > li {border-bottom: 1px solid var(--border); padding:var(--notice-row-padding);}
 .notice_board > ul > li.admin_notice {background: var(--input-point);}
 .notice_board > ul > li.admin_notice .admin_tag { background-color: #ff3860; font-size: 12px; border-radius: 4px; display: inline; padding: 3px 9px; color:var(--bg-right-gray); margin-right: 8px;}
 .notice_board > ul > li .new_tag {background-color: #209cee; font-size: 12px; border-radius: 4px; display: inline; padding: 3px 9px; color:var(--bg-right-gray); margin-right: 8px;}
-.notice_board > ul > li {border-bottom: 1px solid var(--border); padding: 15px 0;}
 .notice_board > ul > li:hover:not(.admin_notice){ background-color: #fafafa;}
+.notice_board > ul > li.active {background: #fafafa;}
+.notice_board > ul > li.active span:nth-child(2),.notice_board > ul > li:hover span:nth-child(2) {var(--dark-black);}
+.notice_board .notice_board_row:not(.notice_board_heading) span:first-child:before {content: '0'; z-index: 3; }
 
 /* notice board + img (썸네일 추가) */
 .notice_board.img_board .img_board_img { width: 170px; height: 170px; position: relative; overflow: hidden; display: inline-block;}
@@ -181,7 +209,6 @@ main.notice_page { padding: 100px 0;}
 .notice_board.img_board.magazin_board  h3.magazin_board_tit {font-size: 18px; font-weight: bold; line-height: 1.5; font-family: 'NanumSquare'; margin: 8px 0; letter-spacing: 1px;}
 .notice_board.img_board.magazin_board .notice_board_row span:last-child { width: 110px;}
 .notice_board.img_board.magazin_board .notice_board_row > div { width: 350px;}
-
 
   /* media Query css 마지막에 있어야함*/
   @media (max-width:900px) {

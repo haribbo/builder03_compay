@@ -12,11 +12,11 @@
   --bg-right-gray:#f3f3f3;
   --box_shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
   --opacity-white-line: rgba(255,255,255,0.2);
-
+  
   --max-width:1150px;
   --main-padding:0 0 150px 0;
   --max-padding:100px;
-  --margin-top:-80px;
+  --margin-top:-120px;
   --conts-padding: 100px 50px 0 50px;
 }
 
@@ -40,7 +40,7 @@ font-family: 'Russo One', sans-serif; */
 .card_heihgt {height: 258px; width: 100%;}
 
 /* section_heading */
-.section_heading  {text-align: center; position: relative; color:var(--bg-point); max-width: var(--max-width); margin: 0 auto; margin-top: -80px; background: #fff; padding: 80px 0; z-index: 10;}
+.section_heading  {text-align: center; position: relative; color:var(--bg-point); max-width: var(--max-width); margin: 0 auto; background: #fff; padding: 80px 0; z-index: 10;  margin-top: var(--margin-top); }
 .section_heading h2,.section_tit { font-size: 40px; margin: 10px 0 10px 0; line-height: 1.4; letter-spacing: 1.5px; color: inherit;}
 .section_heading p  {max-width: 400px; margin: 0 auto; font-weight: bold; font-size: 15px; text-transform: uppercase;letter-spacing: -1px; color:inherit;}
 .section_heading .absole_line_h {height: 18px; overflow: hidden;}
@@ -66,7 +66,7 @@ font-family: 'Russo One', sans-serif; */
 /* sub_page_showcase */
 /*css 소스 예:
 .sub_page_showcase.aubout_showcase :background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/aboutus/aboutus_showcase.jpg') no-repeat center/cover; */
-.sub_page_showcase {color: var(--ft-white); width: 100%; height: 350px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table; position: relative;}
+.sub_page_showcase {color: var(--ft-white); width: 100%; height: 430px; overflow: hidden;  text-transform: uppercase; text-align: right; display: table; position: relative;}
 .sub_page_showcase .inner {display: table-cell; vertical-align: middle; width: 100%;}
 .sub_page_showcase h2 { color: inherit; margin: 8px; font-size: 37px; max-width: 1100px; margin: 0 auto; font-family: 'Russo One', sans-serif !important;}
 /* .sub_page_showcase p .dash {margin: 0 8px; font-weight: bold;} */
