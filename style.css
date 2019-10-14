@@ -35,7 +35,9 @@ strong{font-weight: 600;}
 
 .btn_up_cover {position: fixed; right:2.5%; top: 0; height: 100vh; z-index: 100;}
 .btn_up {background: trasparts; border: 3px solid var(--sub-color); position: relative; z-index: 999; display: inline-block; padding: 10px; margin-top: 80vh; color:var(--sub-color); font-weight: bold; }
-.mouse_ani {position: absolute; color:#fff; z-index:889; left:50%; transform: translateX(-50%); font-size: 35px; margin-top: -100px;}
+.mouse_ani {position: absolute; color:#fff; z-index:889; left:50%; transform: translateX(-50%); font-size: 35px; margin-top: -120px; z-index: 30;}
+.mouse_ani i {animation: mouseMover .5s ease-in-out .3s infinite alternate; display: inline-block; position: relative;}
+.mouse_ani i:after {content: 'SCROLL';position: absolute;bottom:-15px; left:50%; font-size: 14px; transform: translateX(50%);  text-align: center; display: inline-block; font-family: 'Russo One', sans-serif;}
 main:not(.index_page) {padding: var(--main-padding);}
 header {position: absolute; z-index: 999; width: 100%; }
 nav.main_nav {margin: 0 auto; display: flex;  justify-content: space-between; align-content: stretch; align-items: center;  max-width: 1100px;}
@@ -49,7 +51,7 @@ nav.main_nav > ul > li:hover a { opacity: 1;}
 
 /* main_page */
 .index_page {position: relative;}
-.links_banner {z-index: 888;position: fixed;}
+.links_banner {z-index: 100;position: fixed;}
 footer {position: fixed; bottom:0; z-index: 888;}
 /*
 section.main_top .absole_line_h,section.main_bottom .absole_line_h {display: none;}
@@ -67,6 +69,10 @@ section.main_top .swiper-inner > div:hover:after {right:0;}
 section.main_top .swiper-inner > div:hover .small_heading1 { opacity: 1; transform: scale(1); right:30px;}
 section.main_top .swiper-inner > div.active:after {right:0;}
 section.main_top .swiper-inner > div.active .small_heading1 { opacity: 1; transform: scale(1); right:30px;}
+.swiper_arrow_case {width: var(--max-wide); position: absolute; left:50%; top:79vh; z-index: 999;}
+.swiper_arrow_case [class*="button"] {}
+.swiper_arrow_case [class*="button"] i {display: inline-block; padding: 10px; border:2px solid var(--sub-color); display: inline-block;  margin-top: -5vh; color: var(--sub-color);}
+.swiper_arrow_case .swiper-button-next {margin-right: -8px; }
 
 /* 공통 showcase */
 .sub_page_showcase {background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/showcase.jpg') no-repeat center/cover;}

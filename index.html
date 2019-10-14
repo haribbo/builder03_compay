@@ -152,12 +152,17 @@
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper_arrow_case">
+    <div class="swiper-button-next"><i class="xi-angle-down"></i></div>
+    <div class="swiper-button-prev"><i class="xi-angle-up"></i></div>
+    </div>
   </div>
   <!-- slider -->
-  <div class="mouse_ani">
-    <i class="xi-mouse"></i>
-  </div>
   <section class="links_banner">
+    <!-- <div class="mouse_ani">
+      <i class="xi-mouse"></i>
+    </div> -->
     <div class="links_banner_left">
       <div class="small_heading1">
         <h2>사업분야</h2>
@@ -182,10 +187,15 @@
     direction: 'vertical',
     slidesPerView: 1,
     mousewheel: true,
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
   });
 </script>
 

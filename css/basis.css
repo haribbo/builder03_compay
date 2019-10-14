@@ -12,7 +12,7 @@
   --bg-right-gray:#f3f3f3;
   --box_shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
   --opacity-white-line: rgba(255,255,255,0.2);
-  
+
   --max-width:1150px;
   --main-padding:0 0 150px 0;
   --max-padding:100px;
@@ -26,6 +26,10 @@ to {opacity: 1; left: -15px;}}
 @keyframes fadeInRight {
 from {opacity: 0;left:100%;}
 to {opacity: 1; left: -15px;}}
+@keyframes mouseMover {
+  form {transform: translateY(-100px);}
+    to {transform:translateY(40px);}
+}
 
 /* font-family: 'Big Shoulders Text', cursive;
 font-family: 'Russo One', sans-serif; */
