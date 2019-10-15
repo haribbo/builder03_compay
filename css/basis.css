@@ -41,6 +41,7 @@ font-family: 'Russo One', sans-serif; */
 .ft_left {text-align: left !important;}
 .ft_right {text-align: right !important;}
 .ft_bold {font-weight: bold;}
+.ft_right {font-weight:400;}
 .card_heihgt {height: 258px; width: 100%;}
 
 /* section_heading */
@@ -50,9 +51,12 @@ font-family: 'Russo One', sans-serif; */
 .section_heading .absole_line_h {height: 18px; overflow: hidden;}
 .section_heading .absole_line_h:after {background-color:var(--point-color); width: 60px; height: 12px; transform: rotate(-50deg); transform-origin: center; margin-left: -30px; top:25%; }
 /* heading */
-.big_heading { text-align: right; color: var(--ft-white);}
-.big_heading h2,.small_heading h2{ position: relative; font-size: 32px; color:inherit;}
-.big_heading p {color:inherit; font-weight: normal; font-family: 'Russo One', sans-serif; font-size:14px;}
+/* ,.small_heading h2 */
+.main_headidng { text-align: left; color: var(--ft-white); height: inherit;}
+.main_headidng h2{ position: relative; font-size: 40px; color:inherit; margin: 2.5% 0 5% 0; letter-spacing: 1.5px; font-family: 'NanumSquare', sans-serif; z-index: 110;}
+.main_headidng p {color:inherit; font-weight: normal; font-family: 'Russo One', sans-serif; font-size:25px; position: relative; z-index: 110;}
+.main_headidng p.desc,.main_desc {font-size: 18px; max-width: 500px; display: inline-block; line-height: 1.5; font-weight: 600; font-family: 'Nanum Gothic', sans-serif; padding-right: 10%; color:var(--ft-white); position: relative; z-index: 110;}
+.main_headidng span {color:inherit; font-size: inherit; line-height: inherit;}
 
 .small_heading1 { text-align: right; color: var(--ft-white);}
 .small_heading1 h2,.small_heading2 h3{ position: relative; font-size: 20px; color: inherit;}
@@ -77,8 +81,8 @@ font-family: 'Russo One', sans-serif; */
 .sub_page_showcase p {color:var(--point-color) !important;  font-size: 18px;}
 
 /* builder3 */
-.line_overlay{position: relative; z-index: 30; width: 100%; position: absolute; top:0;  height: 350px; left:0;}
-.line_overlay .line_overlay_inner {max-width: var(--max-width); margin: 0 auto; height: inherit;}
+.line_overlay{ z-index: 30; width: 100% !important; position: absolute !important; top:0;  height: 350px; left:0; max-width: 100% !important;}
+.line_overlay .line_overlay_inner {max-width: var(--max-width); margin: 0 auto; height: inherit; position: relative;} /*flex 넣어야함*/
 .line_overlay .line_overlay_inner > div {border-left:1px solid var(--opacity-white-line); flex-basis: 25%; max-width: 25%; overflow: hidden; position: relative; height: inherit;}
 .line_overlay .line_overlay_inner > div:last-child {border-right: 1px solid var(--opacity-white-line); position: relative; display: table; width: 100%;}
 .line_overlay .ani_tit {vertical-align: middle; display: table-cell; position: relative;  left:100%; transition: 0.3s;}
@@ -119,7 +123,8 @@ font-family: 'Russo One', sans-serif; */
 .main_btn.active {color:#fff; border-color:var(--point-color);} .main_btn.active:after {width: 100%;}
 .main_btn:hover {color:#fff; border-color:var(--point-color);}
 .main_btn:after { background: var(--point-color);content: ''; position: absolute; width: 0%; height: 100%; z-index: -1; transform: translateX(-50%); top:0; left:50%;  transition: 0.3s;}
-.main_btn:hover:after {width: 100%; }
+.main_btn:hover:after {width: 100%;}
+.main_btn.white {color:#fff;  border: 2px solid #fff; }
 .solid_card {position: relative; }
 .solid_card:after {content: '';z-index: -1;  position: absolute; width: 100%; height: 100%; background-color: var(--point-color); right:-7px; bottom: -10px;}
 
