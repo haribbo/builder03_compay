@@ -256,6 +256,11 @@ footer p .point_color {font-weight: bold; letter-spacing: 0; display: inline-blo
   section.main_top .swiper-inner .line_overlay {height: inherit;}
   section.main_top .swiper-inner .line_overlay .line_overlay_inner {flex-direction:column;}
   section.main_top .swiper-inner .line_overlay .line_overlay_inner > div {height: 25%; max-height: 25%;}
+  section.main_top .swiper-inner > article.slide2 .main_headidng,section.main_top .swiper-inner > article.slide2 .inner  {padding:0; padding-left: 10%;}
+  section.main_top .swiper-inner > article.slide2 .main_headidng {position: absolute; bottom: 5%; display: inline-block; width: 100%; left:0; top:50%; trnsform:translateY(50%);}
+  section.main_top .swiper-inner > article.slide2 {width: 100%; float: none; height: 50%; max-height: 50%; display: block;}
+  section.main_top .swiper-inner > article.slide2 .main_headidng, section.main_top .swiper-inner > article.slide2 .inner { display: block;}
+
   /* obut us & map 공통 layout */
   .table_layout { padding: 0;}
   .table_layout li { display: block;}
