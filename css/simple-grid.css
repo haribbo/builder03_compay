@@ -95,3 +95,9 @@ ul.layout_cover2 li,ul.layout_cover3 li,ul.layout_cover4 li
 .sub_layout h4 {font-size: 20px; margin-bottom: 20px; color:var(--dark-black);}
 .sub_layout p {margin-bottom: 8px;}
 /* sub_page layout*/
+
+@media (max-width:900px) {
+  .sub_layout {padding: 30px 4% !important;}
+  .sub_layout .sub_layout_left {float: none; display: none;}
+  .sub_layout .sub_layout_right { padding-left: 0; }
+}

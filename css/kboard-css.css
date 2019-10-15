@@ -234,8 +234,15 @@ main.notice_page {}
 
     .notice_board.img_board.magazin_board .notice_board_row > div  { width: 100%; background:#fff; }
 
+    .global_pagination {margin: 25px 0;}
     .global_pagination ul {text-align: center;}
     .global_pagination ul li {display: inline-block; b}
     .global_pagination ul li.first-page,.global_pagination li.last-page {display: inline-block;}
     .global_document {padding: 0 5%;}
+
+      /* search_bar */
+      .notice_board .input_row.search_bar,.notice_page .input_row {margin-bottom: 0;}
+      .notice_board .input_row.search_bar select {max-width: 100%; width: 100%; margin-bottom: 20px;}
+      .notice_board .input_row.search_bar input { max-width: 67.3%;}
+
   }

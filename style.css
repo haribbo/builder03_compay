@@ -33,14 +33,18 @@ p {line-height: 1.8; color:var(--ft-sub);}
 strong{font-weight: 600;}
 * {box-sizing: border-box;}
 
+.mobile_br { display: none;}
 .btn_up_cover {position: fixed; right:2.5%; top: 0; height: 100vh; z-index: 100;}
 .btn_up {background: trasparts; border: 3px solid var(--sub-color); position: relative; z-index: 999; display: inline-block; padding: 10px; margin-top: 80vh; color:var(--sub-color); font-weight: bold; }
 .mouse_ani {position: absolute; color:#fff; z-index:889; left:50%; transform: translateX(-50%); font-size: 35px; margin-top: -120px; z-index: 30;}
 .mouse_ani i {animation: mouseMover .5s ease-in-out .3s infinite alternate; display: inline-block; position: relative;}
 .mouse_ani i:after {content: 'SCROLL';position: absolute;bottom:-15px; left:50%; font-size: 14px; transform: translateX(50%);  text-align: center; display: inline-block; font-family: 'Russo One', sans-serif;}
+.mobile_btn {display: inline-block; width: 35px; height: 35px; text-align: center; color:var(--point-color); display: none;}
+.mobile_btn i {color:inherit;}
+
 main:not(.index_page) {padding: var(--main-padding);}
 header {position: absolute; z-index: 999; width: 100%; }
-nav.main_nav {margin: 0 auto; display: flex;  justify-content: space-between; align-content: stretch; align-items: center;  max-width: 1100px;}
+nav.main_nav { margin: 0 auto; display: flex;  justify-content: space-between; align-content: stretch; align-items: center;  max-width: 1100px; position:relative;}
 nav.main_nav > h1.logo { font-family: 'Russo One', sans-serif;  letter-spacing: 1px; font-size: 20px; font-weight: bold; display: inline-block; color:var(--ft-white); position: relative; z-index: 10; }
 nav.main_nav > h1.logo a,nav.main_nav > h1.logo span {font-size: inherit; color:inherit; font-family: inherit; letter-spacing: inherit;}
 nav.main_nav > h1.logo span.bg {display: inline-block; position: absolute; width: 50px; height: 50px; background-color: var(--point-color); top:-19px; left:0; z-index: -1; transform:skewX(-20deg);}
@@ -51,28 +55,23 @@ nav.main_nav > ul > li:hover a { opacity: 1;}
 
 /* main_page */
 .index_page {position: relative;}
-.links_banner {z-index: 100;position: fixed;}
-footer {position: fixed; bottom:0; z-index: 888;}
-/*
-section.main_top .absole_line_h,section.main_bottom .absole_line_h {display: none;}
-section.main_top .swiper-inner > div.active:after {right:0;}
-section.main_top .swiper-inner > div.active .small_heading1 { opacity: 1; transform: scale(1); right:30px;}
-*/
-.swiper-container  {height: 78.68vh !important;}
+.swiper-container  {height: 75vh !important; width: 100%:}
 section.main_top {background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('images/marketing.jpg') no-repeat center/cover; position: relative; height: inherit;}
 section.main_top .swiper-inner {max-width: 1100px; margin: 0 auto; height: inherit; position: relative; width: 1100px;}
 section.main_top .swiper-inner > div {border-left:1px solid var(--opacity-white-line); max-width: 25%; position: relative; float: left; width: 25%;  height: inherit; overflow: hidden;}
 section.main_top .swiper-inner > div:last-child {border-right: 1px solid var(--opacity-white-line);}
 section.main_top .swiper-inner > div .small_heading1 {position: absolute; right: 40px; bottom: 40px; z-index: 10; opacity: 0.6; transform: scale(0.9); transform-origin:bottom; transition: 0.3s;  right: -100%; }
 section.main_top .swiper-inner > div:after { content: ''; height: 100%; width: 100%; right:-100%; position: absolute; top:0;/*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))*/ background: linear-gradient(rgba(41, 235, 101, 0.61), rgba(41, 235, 101, 0.58)); transition: 0.3s;}
-section.main_top .swiper-inner > div:hover:after {right:0;}
+section.main_top .swiper-inner > div:hover:after {left:0%;}
 section.main_top .swiper-inner > div:hover .small_heading1 { opacity: 1; transform: scale(1); right:30px;}
 section.main_top .swiper-inner > div.active:after {right:0;}
 section.main_top .swiper-inner > div.active .small_heading1 { opacity: 1; transform: scale(1); right:30px;}
-.swiper_arrow_case {width: var(--max-wide); position: absolute; left:50%; top:79vh; z-index: 999;}
+.swiper_arrow_case {position: absolute; left:50%; top:69.5vh; z-index: 100; background: red; z-index: 9999;}
 .swiper_arrow_case [class*="button"] {}
-.swiper_arrow_case [class*="button"] i {display: inline-block; padding: 10px; border:2px solid var(--sub-color); display: inline-block;  margin-top: -5vh; color: var(--sub-color);}
-.swiper_arrow_case .swiper-button-next {margin-right: -8px; }
+.swiper_arrow_case [class*="button"] i {position: absolute; bottom:0; display: inline-block; padding: 10px; border:2px solid var(--sub-color); display: inline-block;  margin-top: -5vh; color: var(--sub-color);}
+.swiper_arrow_case .swiper-button-next {width: 40px;}
+.swiper_arrow_case .swiper-button-prev {width: 40px;}
+.swiper-button-next:after, .swiper-button-prev:after {display: none; margin-top: 0 !important}
 
 /* 공통 showcase */
 .sub_page_showcase {background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('images/showcase.jpg') no-repeat center/cover;}
@@ -81,12 +80,18 @@ main.project_page {padding-bottom: var(--max-padding);  max-width: var(--max-wid
 main.project_page .section_heading {display: block; background: #fff; padding: 80px 0;}
 section.project { position: relative; display: block;}
 section.project .project_list {overflow:hidden; position: relative; z-index: 2;}
-section.project .project_list li{ float: left; width: 25%; border: 1px solid var(--opacity-white-line); height: 370px; border-right:none; position:relative;}
+section.project .project_list li{overflow: hidden; position: relative; float: left; width: 25%; border: 1px solid var(--opacity-white-line); height: 370px; border-right:none; position:relative;}
 section.project .project_list li:nth-child(4n) {border-right: 1px solid var(--opacity-white-line);}
-section.project .project_list li .overlay {opacity: 0; width: 100%; height: 100%; background-color:rgba(0,0,0,0.7); position: absolute; top:0; left:0; z-index: 3; overflow: hidden; text-align: center; transition: .4s;}
-section.project .project_list li .overlay i {position: relative; display: inline-block; top: 50%;  transform: translateY(-50%); color:#fff; font-size: 20px; width: 50px; height: 50px; line-height: 45px; text-align: center; border:2px solid #fff; border-radius: 50%;}
+section.project .project_list li .overlay {opacity: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.7); border:5px solid var(--point-color);position: absolute; top:0; left:0; z-index: 3; overflow: hidden; text-align: center; transition: .4s;}
+section.project .project_list li .overlay i {position: absolute; margin-bottom: 20px; margin-right: 20px; bottom: 0; right:0; font-weight: bold; font-size: 20px; width: 40px; height: 40px; line-height: 37px; text-align: center; border:2px solid #555; border-radius: 50%;}
 section.project .project_list li:hover .overlay {opacity:1;}
 section.project .project_list li.active .overlay {opacity:1;}
+section.project .project_list li:after {position: absolute; content: ''; top: 20px; left:20px; width: 35px; height: 3px; background:var(--point-color); z-index: 10;}
+section.project .project_list li h2{z-index: 30;  margin-left: 100px;  margin-left: 20px; margin-top:-140px; position: absolute; left:20px; top:0; transition: .3s; max-width: 30px; font-size: 18px; line-height: 1.2;}
+section.project .project_list li.active h2 {margin-top: 40px;}
+section.project .project_list li:hover h2 {margin-top: 40px;}
+section.project .project_list li h2:before{content: 'project'; max-width: 10px; font-size: 14px; text-transform: uppercase; font-family: 'Russo One', sans-serif; transform: rotate(90deg); position: relative; position: absolute; left: -20px;}
+
 section.project .line_overlay.body,footer .line_overlay.footer
  {height: 100%; z-index: 1; opacity: 0.4;}
 /* .placeholder {background-color: #1d2329;} */
@@ -205,16 +210,94 @@ section.busi_cate .layout_cover3:last-child { background: linear-gradient(rgba(0
 .busi_tab_menu li:after {content: ''; position: absolute; right:0; top:25%; height: 50%; width: 1px; background:var(--opacity-white-line);  z-index: 3;}
 
 /* banner */
-.links_banner { background-color: var(--dark-black); margin: 0 auto; position: relative; font-size: 0; display: table; text-align: center; width: 100%; overflow: hidden; vertical-align: middle;}
+.links_banner.index_banner {z-index: 100;position: fixed;  height: 20vh;}
+.links_banner { height: auto; margin: 0 auto; display: flex; flex-wrap: wrap; background-color: var(--dark-black); margin: 0 auto; position: relative; text-align: center; width: 100%; justify-content: center;}
+.links_banner > div { width:100%; max-width: 550px; height: inherit; border-left: 1px solid var(--opacity-white-line);}
+.links_banner > div:after {display: table; clear: both; float: none; content: ''; overflow: hidden;}
 .links_banner > div:last-child {border-right: 1px solid var(--opacity-white-line);}
-.links_banner > div {display: inline-block;font-size: 0; border-left: 1px solid var(--opacity-white-line);  padding: 50px 0; width: 550px;}
-.links_banner > div .small_heading1 {/*padding: 0 103.5px; */ padding: 0 50px;}
-.links_banner:after,.links_banner:before {content: ''; width: 100%; height: 100%; top:0; position: absolute; background-color: var(--dark-black); }
-.links_banner:before{right:0; margin-right:100%;}
-.links_banner:after{left:0; margin-left:100%;}
+.links_banner > div {vertical-align: middle;}
+.links_banner > div .small_heading1 {padding: 6.5vh 50px; height: inherit; }
 
 /* footer */
-footer {background: #000; height: 5vh;text-align: center; position: relative;}
+footer.index_footer {position: fixed; width: 100%;}
+footer { bottom:0; z-index: 888; background: #000; height: 5vh; width: }
 footer span { font-family: inherit;}
-footer p {font-family: 'Russo One', sans-serif; line-height: 5vh; font-size: 13px; color:var(--ft-white); opacity: 0.8; line-height: 5vh; vertical-align: middle;}
+footer p {font-family: 'Russo One', sans-serif; line-height: 5vh; font-size: 13px; color:var(--ft-white); opacity: 0.8; line-height: 5vh; vertical-align: middle; text-align: center;}
 footer p .point_color {font-weight: bold; letter-spacing: 0; display: inline-block; padding-right: 40px;}
+
+@media (max-width:900px){
+  /* manin_nav */
+  nav.main_nav {padding-left: 3%; padding-right: 3%; flex-direction: column; background: #333;}
+  nav.main_nav > h1.logo {width: 100%; text-align: center; position: relative;  padding: 15px 0; display: none;}
+  nav.main_nav > ul {display: none;}
+  /* nav.main_nav > h1.logo:hover+ul {display: block;} */
+  nav.main_nav > h1.logo a {position: relative; padding: 15px 0;}
+  nav.main_nav > h1.logo span.bg {left:0;}
+  nav.main_nav > ul > li {display: block; padding: 10px 0;}
+  /* index-main  */
+  body.index {height: 100vh; overflow: hidden; }
+  main:not(.index_page),.contact_page {padding: 0;}
+  .swiper-container { height: 95vh;}
+  section.main_top .swiper-inner > div {float: none; clear: both; width: 100%; max-width: 100%; height:25%; }
+  section.main_top .swiper-inner > div {border-bottom:1px solid var(--opacity-white-line);}
+  section.main_top .swiper-inner > div:last-child {border-bottom: none;}
+  /* obut us & map 공통 layout */
+  .table_layout { padding: 0;}
+  .table_layout li { display: block;}
+  .table_layout li span {display: block;}
+  /* about_page */
+  main.about_page article.about_3 ul li span.heading,main.about_page article.about_3 ul li span.heading { width: 100%;}
+  main.about_page article.about_3 ul li span:first-child,main.about_page article.about_3 ul li span:first-child   {width: 100%;}
+  main.about_page article.about_3 .img_row1.placeholder {height: 250px;}
+  main.about_page article.about_3 .img_row2 > div {height: 200px}
+  main.about_page .sub_layout .sub_layout_right article { margin-bottom: 50px; padding-bottom: 50px;}
+  main.map_page .sub_layout .sub_layout_left {display: block;}
+  main.map_page .sub_layout .sub_layout_right {height: 400px;}
+  /* shocwcase */
+  .line_overlay .line_overlay_inner.flex_row {flex-direction: column;}
+  .line_overlay .line_overlay_inner > div {flex-basis: 100%; max-width: 100%; height: 25%; max-height: 25%; border-bottom: 1px solid var(--opacity-white-line);}
+  .line_overlay .line_overlay_inner > div:nth-child(3) { display: none;}
+  /* business_page */
+  section.busi_cate {margin-top: 0;}
+  section.busi_cate .layout_cover3  {margin-bottom: 0;}
+  section.busi_cate .layout_cover3 > div.busi_tit { margin-bottom: -80px;}
+  section.busi_cate .layout_cover3 > div.busi_tit:after {display: none;}
+  section.busi_cate .layout_cover3 > div.busi_txt:before  {display: none;}
+  section.busi_cate .layout_cover3 > div.busi_more  {display: none;}
+  /* contact */
+  main.contact_page .input_fields_cover .input_fields { padding: 100px 4.5%  0 4.5%;}
+  main.contact_page .input_row.radio_row { margin-bottom: 0;}
+  main.contact_page .btn_case { padding: 10px 0 40px 0; }
+  /* project */
+  section.project .project_list { padding: 0 5%;}
+  section.project .project_list li {float: none; display: block; width: 100%;}
+  /* project_detail */
+  .project_detail_page {}
+  .project_small_img_cover {padding-top: 50px;}
+  section.project_detail article.grid_row.project_info [class^="col-"] h3 { margin: 20px 0}
+  .grid_row [class^="col"] { padding: 0 2.5%;}
+  section.project_detail article.grid_row:last-child .solid_card{ display: none;}
+  section.project_detail div.project_small_img_cover {padding: 80px 0 30px 0;}
+  section.project_detail article.project_big_img {padding-bottom: 0px;}
+  section.project_detail article.grid_row [class^="col-"] .small_heading2,
+  section.project_detail div.project_small_img_cover article.grid_row [class^="col-"] p {text-align: center;}
+  section.project_detail div.project_small_img_cover article:first-child {margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #ccc;}
+  section.project_detail article.grid_row [class^="col-"] .small_heading2 {padding: 30px 0;}
+  section.project_detail article.grid_row:nth-child(2) .small_heading2 {padding: 0 0 30px 0};
+  /* global banner */
+  /* index_page 외 sub_page 에 position css 다르게 적용 필요 , 퀵배뉴 가려짐 !! */
+  .links_banner {flex-wrap: nowrap; height: auto; }
+  .links_banner > div {width: 50%; max-width: 50%;}
+  .links_banner > div .small_heading1 {padding: 30px 15px;}
+  .links_banner > div .small_heading1 h2 {font-size: 16px;}
+  .links_banner > div .small_heading1 p {font-size: 12px;}
+  /* global footer */
+  footer { text-align: center; width: 100%; }
+  footer:not(.index_footer){height: auto; position: relative;  padding: 10px 0;}
+  footer:not(.index_footer) p {line-height: 1.3;}
+  footer:not(.index_footer) .point_color {display: blockpadding-right: 0px;}
+  /* btns */
+  .mobile_br { display: block;}
+  .mobile_btn {  display: block; position: absolute; right:0; z-index: 999;  z-index: 10;}
+  .mobile_btn:hover+ul,.mobile_btn.active+ul { display: block}
+}
