@@ -1,0 +1,153 @@
+i$('input:checkbox[name="checkbox_name"]').is(":checked") == true
+$('input:checkbox[id="checkbox_name"]:checked').length 
+
+출처: https://csslab.tistory.com/116 [learning DEV :D ]
+출처: https://csslab.tistory.com/116 [learning DEV :D ]
+f($('input:radio[name=kboard-option-radio]').is(':checked') == false) {
+	alert("문의유형을 선택해주세요");
+}
+전체에서는 : 13번~23번 
+
+$('input[type="radio"]') 0~3 
+> 1개라도 check pass 
+> 아니라면 "altert "문의유형을 선택해주세요"
+$('input[type="checkbox"]') 0 
+>checkd == "false" 
+>아니라면 "altert "미동의시 문의가 어렵습니다. "
+$("input:visible")반복문을 돌린다. 4~9 
+>if()
+
+//완성!
+$('input[type="radio"]').each(function(idx){
+ if(!$(this).is(":checked")) {
+ console.log("체크가안되었습니다.");
+} else {
+console.log("체크가되었습니다");
+return true;
+}
+});
+
+
+$('input[type="checkbox"]').each(function(idx){
+ if(!$(this).is(":checked")) {
+ console.log("동의 해주세요");
+reu
+} else {
+console.log("동의가 되었습니다");
+}
+});
+
+
+$('input[type="text"]').each(function(idx){
+ if(!$(this).val()) {
+ console.log(`${idx} 내용을 입력해주세요`);
+return false;
+} else {
+console.log("입력되었습니다.");
+}
+});
+ 
+$('input[type="radio"]').each(function(idx){
+  console.log($(this).val());
+});
+
+$('input[type="radio"]').eq(0).is(":checked");
+
+
+
+
+
+var taget = "text";
+
+$('input[type="text"]').each(function(idx){
+ if(!$(this).val()) {
+ console.log(`${idx} 내용을 입력해주세요`);
+} else {
+console.log("입력되었습니다.");
+}
+});
+
+
+
+
+var taget = ["radio","checkbox","text"];
+for (i = 0; i < taget.length; i++) {
+
+	//input type 비교
+	$(`input[type="${taget[i]}"]`).each(function(idx) {
+    if (!$(this).val()) {
+      console.log(`${idx} 내용을 입력해주세요`);
+      return false;
+    } else {
+      console.log(`${idx} 입력되었습니다.`);
+    }
+  });
+	console.log("????if문 나옴 ");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+마지막한거 
+
+var ck =0;
+var submit = 0;
+
+
+$('input[type="radio"]').each(function(idx) {
+  if ($(this).is(":checked")) {
+    console.log(`${idx}체크가되었습니다.`);
+	ck+=1;
+  } else {
+    console.log("체크가안되었습니다.");
+	val = false;
+  }
+});
+
+if(ck==0) {
+	 alert("문의 유형을 선택해주세요");
+ }
+
+
+$('input[type="text"]').each(function(idx) {
+  if (!$(this).val()) {
+    console.log(`${idx} 내용을 입력해주세요`);
+	alert("input : 내용을 입력해주세요");
+    return false;
+  } else {
+    console.log("입력되었습니다.");
+  }
+});
+
+	
+
+$('input[type="checkbox"]').each(function(idx) {
+  if (!$(this).is(":checked")) {
+    console.log("동의 해주세요");
+	alert("동의 해주세요");
+  } else {
+    console.log("동의가 되었습니다");
+  }
+});
