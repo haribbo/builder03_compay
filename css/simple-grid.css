@@ -68,19 +68,18 @@ align-items: flex-start;
 .layout_cover2 > div,ul.layout_cover2 li {}
 /* 음수 마진 레이아웃 3칸짤 (컨테이너 필요)*/
 .wide_width {}
-div.layout_cover3,ul.layout_cover3{overflow: hidden; margin: 0 var(--lay-margin2);}
-div.layout_cover3 > div,ul.layout_cover3 li {width: 33.33333%; float: left; padding: var(--lay-padding);}
-div.layout_cover3 > div,ul.layout_cover3 li {}
+.layout_cover3{overflow: hidden; margin: 0 var(--lay-margin2);}
+.layout_cover3 > div,.layout_cover3 > li {width: 33.33333%; float: left; padding: var(--lay-padding);}
+.layout_cover3 > div,ul.layout_cover3 > li {}
 /* 음수 마진 레이아웃 4칸짤 (컨테이너 필요)*/
 .wide_width {}
-div.layout_cover4,ul.layout_cover4 {overflow: hidden; margin: 0 var(--lay-margin2);}
-div.layout_cover4 > div,ul.layout_cover4 li {width: 25%; float: left; padding: var(--lay-padding);}
-div.layout_cover4 > div,ul.layout_cover4 li {}
+.layout_cover4,ul.layout_cover4 {overflow: hidden; margin: 0 var(--lay-margin2);}
+.layout_cover4 > div,ul.layout_cover4 > li {width: 25%; float: left; padding: var(--lay-padding);}
+.layout_cover4 > div,ul.layout_cover4 > li {}
 @media (max-width:900px) {
-div.layout_cover2,div.layout_cover3,div.layout_cover4,ul.layout_cover2,ul.layout_cover3,ul.layout_cover4
-{margin: 0; padding: 0 5%;}
-div.layout_cover2 > div,div.layout_cover3 > div,div.layout_cover4 > div
-ul.layout_cover2 li,ul.layout_cover3 li,ul.layout_cover4 li
+.layout_cover2,.layout_cover3,.layout_cover4, {margin: 0; padding: 0 5%;}
+.layout_cover2 > div,.layout_cover3 > div,.layout_cover4 > div
+.layout_cover2 > li,.layout_cover3 > li,ul.layout_cover4 li
  {float: none; width: 100%; margin-bottom: 3%;}
 }
 /********** layour ************/
@@ -97,7 +96,7 @@ ul.layout_cover2 li,ul.layout_cover3 li,ul.layout_cover4 li
 /* sub_page layout*/
 
 @media (max-width:900px) {
-  .sub_layout {padding: 30px 4% !important;}
-  .sub_layout .sub_layout_left {float: none; display: none;}
+  .sub_layout {padding: 30px 5% !important;}
+  .sub_layout .sub_layout_left {float: none; display: none; width: 100%; padding-right:0;}
   .sub_layout .sub_layout_right { padding-left: 0; }
 }

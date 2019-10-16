@@ -8,8 +8,8 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" charset="utf-8"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <script src="js/swiper.min.js"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <script src="js/main.js" charset="utf-8"></script>
   <title>black Markeitng Copany</title>
   <style>
@@ -73,25 +73,29 @@
       <!-- slide 1  -->
       <section class="main_top swiper-slide">
         <div class="swiper-inner">
-          <div class="marketing">
+          <div class="marketing move_page_click" data="#busi_01">
+            <p class="mobile_txt">Marketing</p>
             <div class="small_heading1">
               <p>Marketing</p>
               <h2>마케팅</h2>
             </div>
           </div>
-          <div class="sns">
+          <div class="sns move_page_click" data="#busi_02">
+            <p class="mobile_txt">SNS</p>
             <div class="small_heading1">
               <p>SNS</p>
               <h2>소셜네트워크</h2>
             </div>
           </div>
-          <div class="blog ">
+          <div class="blog move_page_click" data="#busi_03">
+            <p class="mobile_txt">BLOG</p>
             <div class="small_heading1">
               <p>blog</p>
               <h2>블로그</h2>
             </div>
           </div>
-          <div class="webSite">
+          <div class="webSite move_page_click" data="#busi_04">
+            <p class="mobile_txt">WEBSITE</p>
             <div class="small_heading1">
               <p>Website</p>
               <h2>웹사이트</h2>
@@ -104,7 +108,7 @@
         <div class="swiper-inner">
           <article class="slide2 lt">
             <div class="main_headidng">
-              <p>NOMAD</p>
+              <p class="absole_line_v">NOMAD</p>
               <h2>
                 마케팅 전문가.노마드.<br>
                 비즈니스별 맞춤 마케팅
@@ -119,12 +123,12 @@
               </p>
               <br>
               <div class="btn_case">
-                <a href="" class="main_btn white">노마드알아보기</a>
-                <a href="" class="main_btn white">사업계획서다운로드</a>
+                <a href="about.html" class="main_btn white">노마드알아보기</a>
+                <a href="file/company.txt" download="" class="main_btn white">회사소개서다운로드</a>
               </div>
             </div>
           </article>
-          <div class="line_overlay">
+          <div class="line_overlay index_line_overlay">
             <div class="line_overlay_inner flex_row">
               <div class=""></div>
               <div class=""></div>
@@ -139,7 +143,7 @@
         <div class="swiper-inner">
           <article class="slide2 lt">
             <div class="main_headidng">
-              <p>CONTACT</p>
+              <p class="absole_line_v">CONTACT</p>
               <h2>
                 커뮤니케이션. 노마드.<br>
                 뛰어난 파트너쉽
@@ -154,12 +158,12 @@
               </p>
               <br>
               <div class="btn_case">
-                <a href="" class="main_btn white">상담신청하기</a>
-                <a href="" class="main_btn white">오시는길</a>
+                <a href="contact.html" class="main_btn white">상담신청하기</a>
+                <a href="map.html" class="main_btn white">오시는길</a>
               </div>
             </div>
           </article>
-          <div class="line_overlay">
+          <div class="line_overlay index_line_overlay">
             <div class="line_overlay_inner flex_row">
               <div class=""></div>
               <div class=""></div>
@@ -172,7 +176,7 @@
       </section>
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+    <!-- <div class="swiper-pagination"></div> -->
     <!-- Add Arrows -->
     <div class="swiper_arrow_case">
       <div class="swiper-button-next"><i class="xi-angle-down"></i></div>
@@ -181,20 +185,21 @@
   </div>
   <!-- slider -->
   <section class="links_banner index_banner">
-    <!-- <div class="mouse_ani">
-      <i class="xi-mouse"></i>
-    </div> -->
     <div class="links_banner_left">
-      <div class="small_heading1">
-        <h2>사업분야</h2>
-        <p>노마드의 사업분야 및 마케팅에 대해 알아보세요</p>
-      </div>
+      <a href="business.html">
+        <div class="small_heading1">
+          <h2>사업분야</h2>
+          <p>노마드의 사업분야 및 마케팅에 대해 알아보세요</p>
+        </div>
+      </a>
     </div>
     <div class="links_banner_right">
-      <div class="small_heading1">
-        <h2>프로젝트</h2>
-        <p>프로젝트를 참고하여 맞는 마케팅 방법을 찾아보세요</p>
-      </div>
+      <a href="project.html">
+        <div class="small_heading1">
+          <h2>프로젝트</h2>
+          <p>프로젝트를 참고하여 맞는 마케팅 방법을 찾아보세요</p>
+        </div>
+      </a>
     </div>
   </section>
 
